@@ -1,10 +1,10 @@
 /* Colors */
 :root {
-  --PrimaryColor: hsl(201, 100%, 36%);
-  --PrimaryLight: hsl(190, 100%, 42%);
-  --HoverColor: hsl(214, 97%, 27%);
+  --PrimaryColor: hsl(219, 65%, 72%);
+  --PrimaryLight: hsl(220, 64%, 88%);
+  --HoverColor: hsl(203, 54%, 46%);
   --WhiteColor: hsl(0, 0%, 100%);
-  --BlackColor: hsl(0, 0%, 18%);
+  --BlackColor: hsl(206, 73%, 9%);
   --textColor: hsl(0, 0%, 93%);
   --greyBg: hsl(0, 0%, 96%);
   --greyText: rgb(190,190,190);
@@ -12,11 +12,79 @@
   /* box-shadow: rgba(0, 0, 0, 0.1); */
 }
 
+.navBarSection .header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000;
+}
 .navBarSection .header .logoDiv svg {
   fill: var(--PrimaryColor);
-  width: 220px;
+  width: 150px;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
 }
 .navBarSection .header .logoDiv svg:hover {
+  fill: var(--HoverColor);
   transform: scale(1.05);
+}
+@media screen and (max-width: 768px) {
+  .navBarSection .header .navBar {
+    background: var(--BlackColor);
+    position: absolute;
+    height: -moz-max-content;
+    height: max-content;
+    padding: 1rem;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 4px rgba(209, 209, 209, 0.904);
+    transition: 0.5s ease;
+    z-index: 1000;
+  }
+  .navBarSection .header .navBar .navLists {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+  }
+  .navBarSection .header .navBar .navLists .navItem {
+    padding: 1rem 0;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink {
+    color: var(--textColor);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink:hover {
+    color: var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns {
+    flex-direction: column;
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .btn {
+    margin-top: 1rem;
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .btn a {
+    font-weight: 600;
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .btn a:hover {
+    color: var(--WhiteColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .btn:hover {
+    background: var(--HoverColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .btn:hover a {
+    color: var(--BlackColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn {
+    background: transparent;
+    border: 1px solid var(--PrimaryColor);
+    color: var(--PrimaryColor);
+  }
 }/*# sourceMappingURL=navbar.css.map */

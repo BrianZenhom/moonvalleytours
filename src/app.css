@@ -5,16 +5,15 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    transition: .2s ease-in-out;
+    transition: .2s ease-out;
 }
 
-/* Colors */
 :root{
-    --PrimaryColor: hsl(201, 100%, 36%);
-    --PrimaryLight: hsl(190, 100%, 42%);
-    --HoverColor: hsl(214, 97%, 27%);
+    --PrimaryColor: hsl(219, 65%, 72%);
+    --PrimaryLight: hsl(220, 64%, 88%);
+    --HoverColor: hsl(203, 54%, 46%);
     --WhiteColor: hsl(0, 0%, 100%);
-    --BlackColor: hsl(0, 0%, 18%);
+    --BlackColor: hsl(206, 73%, 9%);
     --textColor: hsl(0, 0%, 93%);
     --greyBg: hsl(0, 0%, 96%);
     --greyText: rgb(190,190,190);
