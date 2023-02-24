@@ -1,0 +1,28 @@
+/* Colors */
+:root{
+    --PrimaryColor: hsl(201, 100%, 36%);
+    --PrimaryLight: hsl(190, 100%, 42%);
+    --HoverColor: hsl(214, 97%, 27%);
+    --WhiteColor: hsl(0, 0%, 100%);
+    --BlackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(0, 0%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: rgb(190,190,190);
+    --inputColor: hsl(330,12%,97%);
+    /* box-shadow: rgba(0, 0, 0, 0.1); */
+}
+
+.navBarSection{
+    .header{
+        .logoDiv{
+            svg{
+                fill: var(--PrimaryColor);
+                width: 220px;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(1.050);
+                }
+            }
+        }
+    }
+}

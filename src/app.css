@@ -1,3 +1,104 @@
-body{
-    background: blue;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: .2s ease-in-out;
 }
+
+/* Colors */
+:root{
+    --PrimaryColor: hsl(201, 100%, 36%);
+    --PrimaryLight: hsl(190, 100%, 42%);
+    --HoverColor: hsl(214, 97%, 27%);
+    --WhiteColor: hsl(0, 0%, 100%);
+    --BlackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(0, 0%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: rgb(190,190,190);
+    --inputColor: hsl(330,12%,97%);
+    /* box-shadow: rgba(0, 0, 0, 0.1); */
+}
+
+/* DEFAULT STYLES */
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.section{
+    padding: 4rem 0 2rem;
+}
+
+.container{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.icon{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    align-items: center;
+}
+
+.btn{
+    padding: .4rem 1.5rem;
+    background-color: var(--PrimaryColor);
+    border: none;
+    outline: none;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.btn a{
+    color: var(--WhiteColor);
+    font-weight: 500;
+}
+
+.btn:hover a{
+    color: var(--WhiteColor);
+}
+
+.secIntro{
+    max-width: 70%;
+    text-align: center;
+    margin: 0 auto 2rem;
+}
+
+.secIntro .secTitle{
+    color: var(--BlackColor);
+    line-height: 1.5rem;
+    padding-bottom: .5rem;
+}
+
+.secIntro p{
+    font-size: 14px;
+    color: var(--textColor);
+    font-weight: 500;
+}
+
+img, video{
+    width: 100%;
+    height: auto;
+}
+
+input{
+    font-size: 100%;
+}
+
+
