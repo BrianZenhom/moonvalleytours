@@ -1,11 +1,33 @@
-import React from 'react'
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useState, useEffect, useRef } from 'react'
 import './navbar.css'
-import {RiCloseCircleFill} from 'react-icons/ri'
-import {CgMenuGridO} from 'react-icons/cg'
+import { RiCloseCircleFill } from 'react-icons/ri'
+import { CgMenuGridO } from 'react-icons/cg'
 
 
 
 const Navbar = () => {
+
+  // Toggle ShowNav
+  const [active, setActive] = useState('navBar')
+  const showNav = () => {
+    setActive('navBar activeNavbar')
+  }
+
+  const menuRef = useRef()
+  useEffect(()=>{
+    document.addEventListener("mousedown", (event)=>{
+      if(!menuRef.current.contains(event.target)){
+        removeNav(true);
+      }
+    })
+  })
+
+  // Toggle CloseNav
+  const removeNav = () => {
+    setActive('navBar')
+  }
+
   return (
     <section className="navBarSection">
       <div className="header">
@@ -16,7 +38,7 @@ const Navbar = () => {
           </svg>
         </div>
 
-        <div className="navBar">
+        <div className={active}>
           <ul className="navLists flex">
 
             <li className="navItem">
@@ -34,30 +56,30 @@ const Navbar = () => {
             <li className="navItem">
               <a href="#" className="navLink">Contact</a>
             </li>
-            
+
 
             <li className="navItem">
               <a href="#" className="navLink">About</a>
             </li>
 
-            <div className="headerBtns flex">
+            <div ref={menuRef} className="headerBtns flex">
               <button className="btn loginBtn">
                 <a href="#">Login</a>
               </button>
-              <button className="btn">
+              <button className="btn signupBtn">
                 <a href="#">Signup</a>
               </button>
             </div>
-            
+
           </ul>
 
-          <div className="closeNavbar">
+          <div onClick={removeNav} className="closeNavbar">
             <RiCloseCircleFill className="icon" />
           </div>
         </div>
 
-        <div className="toggleNavbar">
-          <CgMenuGridO className='icon'/>
+        <div onClick={showNav} className="toggleNavbar">
+          <CgMenuGridO className='icon' />
         </div>
       </div>
     </section>

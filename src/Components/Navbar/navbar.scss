@@ -5,7 +5,7 @@
     --HoverColor: hsl(203, 54%, 46%);
     --WhiteColor: hsl(0, 0%, 100%);
     --BlackColor: hsl(206, 73%, 9%);
-    --textColor: hsl(0, 0%, 93%);
+    --textColor: hsl(0, 0%, 56%);
     --greyBg: hsl(0, 0%, 96%);
     --greyText: rgb(190,190,190);
     --inputColor: hsl(330,12%,97%);
@@ -37,15 +37,18 @@
         }
         @media screen and (max-width: 768px){
             .navBar{
-                background: var(--BlackColor);
+                background: var(--greyBg);
                 position: absolute;
                 height: max-content;
                 padding: 1rem;
                 width: 100%;
                 top: 0;
                 left: 0;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-20px);
+                transition: .2s ease-in-out;
                 box-shadow: 0 2px 4px rgba(209,209,209,0.904);
-                transition: .5s ease;
                 z-index: 1000;
 
                 .navLists{
@@ -55,7 +58,7 @@
                     margin: auto;
 
                     .navItem{
-                        padding: 1rem 0;
+                        padding: .7rem 0;
                         
                         .navLink{
                             color: var(--textColor);
@@ -83,7 +86,7 @@
                             &:hover{
                                 background: var(--HoverColor);
                                 a{
-                                    color: var(--BlackColor);
+                                    color: var(--WhiteColor);
                                 }
                             }
                         }
@@ -91,10 +94,38 @@
                         .loginBtn{
                             background: transparent;
                             border: 1px solid var(--PrimaryColor);
-                            color: var(--PrimaryColor);
+
+                            a{
+                                color: var(--PrimaryColor);
+                            }
+                            &:hover{
+                                background: var(--HoverColor);
+                                a{
+                                    color: var(--WhiteColor);
+                                }
+                            }
                         }
                     }
                 }
+
+                .closeNavbar{
+                    position: absolute;
+                    top: 1rem;
+                    right: 1.5rem;
+                    color: var(--PrimaryColor);
+                    &:hover .icon{
+                        color: var(--HoverColor);
+                    }
+                }
+            }
+
+            .activeNavbar{
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0px);
+                left: 0;
+                transition: .2s ease-in-out;
+                padding-bottom: 1rem;
             }
         }
     }

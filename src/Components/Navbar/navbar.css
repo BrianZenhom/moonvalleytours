@@ -5,7 +5,7 @@
   --HoverColor: hsl(203, 54%, 46%);
   --WhiteColor: hsl(0, 0%, 100%);
   --BlackColor: hsl(206, 73%, 9%);
-  --textColor: hsl(0, 0%, 93%);
+  --textColor: hsl(0, 0%, 56%);
   --greyBg: hsl(0, 0%, 96%);
   --greyText: rgb(190,190,190);
   --inputColor: hsl(330,12%,97%);
@@ -35,7 +35,7 @@
 }
 @media screen and (max-width: 768px) {
   .navBarSection .header .navBar {
-    background: var(--BlackColor);
+    background: var(--greyBg);
     position: absolute;
     height: -moz-max-content;
     height: max-content;
@@ -43,8 +43,11 @@
     width: 100%;
     top: 0;
     left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: 0.2s ease-in-out;
     box-shadow: 0 2px 4px rgba(209, 209, 209, 0.904);
-    transition: 0.5s ease;
     z-index: 1000;
   }
   .navBarSection .header .navBar .navLists {
@@ -54,7 +57,7 @@
     margin: auto;
   }
   .navBarSection .header .navBar .navLists .navItem {
-    padding: 1rem 0;
+    padding: 0.7rem 0;
   }
   .navBarSection .header .navBar .navLists .navItem .navLink {
     color: var(--textColor);
@@ -80,11 +83,36 @@
     background: var(--HoverColor);
   }
   .navBarSection .header .navBar .navLists .headerBtns .btn:hover a {
-    color: var(--BlackColor);
+    color: var(--WhiteColor);
   }
   .navBarSection .header .navBar .navLists .headerBtns .loginBtn {
     background: transparent;
     border: 1px solid var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn a {
     color: var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn:hover {
+    background: var(--HoverColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn:hover a {
+    color: var(--WhiteColor);
+  }
+  .navBarSection .header .navBar .closeNavbar {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .closeNavbar:hover .icon {
+    color: var(--HoverColor);
+  }
+  .navBarSection .header .activeNavbar {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+    left: 0;
+    transition: 0.2s ease-in-out;
+    padding-bottom: 1rem;
   }
 }/*# sourceMappingURL=navbar.css.map */
