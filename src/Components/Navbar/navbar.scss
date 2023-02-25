@@ -29,10 +29,6 @@
                 cursor: pointer;
                 align-items: center;
                 justify-content: center;
-                &:hover{
-                    fill: var(--HoverColor);
-                    transform: scale(1.050);
-                }
             }
         }
         @media screen and (max-width: 768px){
@@ -47,7 +43,7 @@
                 opacity: 0;
                 visibility: hidden;
                 transform: translateY(-20px);
-                transition: .2s ease-in-out;
+                transition: .05s ease-in-out;
                 box-shadow: 0 2px 4px rgba(209,209,209,0.904);
                 z-index: 1000;
 
@@ -58,14 +54,16 @@
                     margin: auto;
 
                     .navItem{
-                        padding: .7rem 0;
+                        padding: 1rem 0;
                         
                         .navLink{
                             color: var(--textColor);
                             font-size: .9rem;
                             font-weight: 600;
                             &:hover{
+                                font-size: 1rem;
                                 color: var(--PrimaryColor);
+                                transform: scale(1.1);
                             }
                         }
 
@@ -99,10 +97,16 @@
                                 color: var(--PrimaryColor);
                             }
                             &:hover{
-                                background: var(--HoverColor);
+                                background: black rgba(0, 0, 0, 0.842);
+                                transform: scale(1.1);
                                 a{
                                     color: var(--WhiteColor);
                                 }
+                            }
+                        }
+                        .signupBtn{
+                            &:hover{
+                                transform: scale(1.1);
                             }
                         }
                     }
@@ -110,11 +114,12 @@
 
                 .closeNavbar{
                     position: absolute;
-                    top: 1rem;
-                    right: 1.5rem;
+                    top: 2.2rem;
+                    right: 1rem;
                     color: var(--PrimaryColor);
                     &:hover .icon{
                         color: var(--HoverColor);
+                        transform: scale(1.1);
                     }
                 }
             }
@@ -124,8 +129,18 @@
                 visibility: visible;
                 transform: translateY(0px);
                 left: 0;
-                transition: .2s ease-in-out;
+                transition: .05s ease;
                 padding-bottom: 1rem;
+            }
+        }
+
+        .toggleNavbar{
+            .icon{
+                color: var(--PrimaryColor);
+                &:hover{
+                    color: var(--HoverColor);
+                    transform: scale(1.1);
+                }
             }
         }
     }

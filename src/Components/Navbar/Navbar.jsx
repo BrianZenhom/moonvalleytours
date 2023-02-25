@@ -1,29 +1,41 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect, useRef } from 'react'
 import './navbar.css'
-import { RiCloseCircleFill } from 'react-icons/ri'
-import { CgMenuGridO } from 'react-icons/cg'
+import { FaWindowClose } from 'react-icons/fa'
+import { HiViewGrid } from 'react-icons/hi'
 
+const useClickOutside = (handler) =>{
+  const domNode = useRef()
+
+  useEffect(()=>{
+    let maybeHandler = (event)=>{
+    if(!domNode.current.contains(event.target)){
+      handler()
+    }
+  };
+    document.addEventListener("mousedown", maybeHandler);
+
+    return () =>{
+      document.removeEventListener("mousedown", maybeHandler)
+    };
+  })
+
+  return domNode
+}
 
 
 const Navbar = () => {
 
-  // Toggle ShowNav
+  // Toggle ShowNav code
   const [active, setActive] = useState('navBar')
   const showNav = () => {
     setActive('navBar activeNavbar')
   }
-
-  const menuRef = useRef()
-  useEffect(()=>{
-    document.addEventListener("mousedown", (event)=>{
-      if(!menuRef.current.contains(event.target)){
-        removeNav(true);
-      }
-    })
+  // clicking outside removes NAV code
+  const domNode = useClickOutside (()=>{
+    removeNav(true)
   })
-
-  // Toggle CloseNav
+  // Toggle CloseNav code
   const removeNav = () => {
     setActive('navBar')
   }
@@ -62,7 +74,7 @@ const Navbar = () => {
               <a href="#" className="navLink">About</a>
             </li>
 
-            <div ref={menuRef} className="headerBtns flex">
+            <div ref={domNode} className="headerBtns flex">
               <button className="btn loginBtn">
                 <a href="#">Login</a>
               </button>
@@ -74,12 +86,12 @@ const Navbar = () => {
           </ul>
 
           <div onClick={removeNav} className="closeNavbar">
-            <RiCloseCircleFill className="icon" />
+            <FaWindowClose className="icon" />
           </div>
         </div>
 
         <div onClick={showNav} className="toggleNavbar">
-          <CgMenuGridO className='icon' />
+          <HiViewGrid className='icon' />
         </div>
       </div>
     </section>

@@ -29,10 +29,6 @@
   align-items: center;
   justify-content: center;
 }
-.navBarSection .header .logoDiv svg:hover {
-  fill: var(--HoverColor);
-  transform: scale(1.05);
-}
 @media screen and (max-width: 768px) {
   .navBarSection .header .navBar {
     background: var(--greyBg);
@@ -46,7 +42,7 @@
     opacity: 0;
     visibility: hidden;
     transform: translateY(-20px);
-    transition: 0.2s ease-in-out;
+    transition: 0.05s ease-in-out;
     box-shadow: 0 2px 4px rgba(209, 209, 209, 0.904);
     z-index: 1000;
   }
@@ -57,7 +53,7 @@
     margin: auto;
   }
   .navBarSection .header .navBar .navLists .navItem {
-    padding: 0.7rem 0;
+    padding: 1rem 0;
   }
   .navBarSection .header .navBar .navLists .navItem .navLink {
     color: var(--textColor);
@@ -65,7 +61,9 @@
     font-weight: 600;
   }
   .navBarSection .header .navBar .navLists .navItem .navLink:hover {
+    font-size: 1rem;
     color: var(--PrimaryColor);
+    transform: scale(1.1);
   }
   .navBarSection .header .navBar .navLists .headerBtns {
     flex-direction: column;
@@ -93,26 +91,38 @@
     color: var(--PrimaryColor);
   }
   .navBarSection .header .navBar .navLists .headerBtns .loginBtn:hover {
-    background: var(--HoverColor);
+    background: black rgba(0, 0, 0, 0.842);
+    transform: scale(1.1);
   }
   .navBarSection .header .navBar .navLists .headerBtns .loginBtn:hover a {
     color: var(--WhiteColor);
   }
+  .navBarSection .header .navBar .navLists .headerBtns .signupBtn:hover {
+    transform: scale(1.1);
+  }
   .navBarSection .header .navBar .closeNavbar {
     position: absolute;
-    top: 1rem;
-    right: 1.5rem;
+    top: 2.2rem;
+    right: 1rem;
     color: var(--PrimaryColor);
   }
   .navBarSection .header .navBar .closeNavbar:hover .icon {
     color: var(--HoverColor);
+    transform: scale(1.1);
   }
   .navBarSection .header .activeNavbar {
     opacity: 1;
     visibility: visible;
     transform: translateY(0px);
     left: 0;
-    transition: 0.2s ease-in-out;
+    transition: 0.05s ease;
     padding-bottom: 1rem;
   }
+}
+.navBarSection .header .toggleNavbar .icon {
+  color: var(--PrimaryColor);
+}
+.navBarSection .header .toggleNavbar .icon:hover {
+  color: var(--HoverColor);
+  transform: scale(1.1);
 }/*# sourceMappingURL=navbar.css.map */

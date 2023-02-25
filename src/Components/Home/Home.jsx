@@ -3,9 +3,23 @@ import './home.css'
 
 const Home = () => {
   return (
-    <div>
-      Home
-    </div>
+    <section className="home">
+      <div className="secContainer container">
+        <div className="homeText">
+          <h1 className="title">
+            Discover your next adventure.
+          </h1>
+
+          <p className="subTitle">
+            Let us take the hassle of planning your next adventure.
+          </p>
+
+          <button className="btn">
+            <a href="#">Explore</a>
+          </button>
+        </div>
+      </div>
+    </section>
   )
 }
 
