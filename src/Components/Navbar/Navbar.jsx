@@ -62,6 +62,7 @@ const Navbar = () => {
               <a href="#" className="navLink">About</a>
             </li>
 
+
             <div ref={menuRef} className="headerBtns flex">
               <button className="btn loginBtn">
                 <a href="#">Login</a>
