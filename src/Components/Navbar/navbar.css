@@ -1,15 +1,27 @@
 /* Colors */
+<<<<<<< HEAD
+=======
+/* Colors */
+>>>>>>> 939948a (Advanced on navbar)
 :root {
   --PrimaryColor: hsl(219, 65%, 72%);
   --PrimaryLight: hsl(220, 64%, 88%);
   --HoverColor: hsl(203, 54%, 46%);
   --WhiteColor: hsl(0, 0%, 100%);
   --BlackColor: hsl(206, 73%, 9%);
+<<<<<<< HEAD
   --textColor: hsl(0, 0%, 56%);
   --greyBg: hsl(0, 0%, 96%);
   --greyText: rgb(190,190,190);
   --inputColor: hsl(330,12%,97%);
   /* box-shadow: rgba(0, 0, 0, 0.1); */
+=======
+  --textColor: hsl(0, 0%, 58%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  /* box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.1); */
+>>>>>>> 939948a (Advanced on navbar)
 }
 
 .navBarSection .header {
@@ -23,15 +35,39 @@
   z-index: 1000;
 }
 .navBarSection .header .logoDiv svg {
+<<<<<<< HEAD
+=======
+  fill: var(--WhiteColor);
+  width: 150px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.navBarSection .header .logoDiv svg:hover {
+  fill: var(--PrimaryColor);
+  transform: scale(1.1);
+}
+.navBarSection .header .activeLogo svg {
+>>>>>>> 939948a (Advanced on navbar)
   fill: var(--PrimaryColor);
   width: 150px;
   cursor: pointer;
   align-items: center;
   justify-content: center;
 }
+<<<<<<< HEAD
 @media screen and (max-width: 768px) {
   .navBarSection .header .navBar {
     background: var(--greyBg);
+=======
+.navBarSection .header .activeLogo svg:hover {
+  fill: var(--HoverColor);
+  transform: scale(1.1);
+}
+@media screen and (max-width: 768px) {
+  .navBarSection .header .navBar {
+    background: var(--WhiteColor);
+>>>>>>> 939948a (Advanced on navbar)
     position: absolute;
     height: -moz-max-content;
     height: max-content;
@@ -42,8 +78,13 @@
     opacity: 0;
     visibility: hidden;
     transform: translateY(-20px);
+<<<<<<< HEAD
     transition: 0.05s ease-in-out;
     box-shadow: 0 2px 4px rgba(209, 209, 209, 0.904);
+=======
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
+>>>>>>> 939948a (Advanced on navbar)
     z-index: 1000;
   }
   .navBarSection .header .navBar .navLists {
@@ -91,7 +132,11 @@
     color: var(--PrimaryColor);
   }
   .navBarSection .header .navBar .navLists .headerBtns .loginBtn:hover {
+<<<<<<< HEAD
     background: black rgba(0, 0, 0, 0.842);
+=======
+    background: var(--HoverColor);
+>>>>>>> 939948a (Advanced on navbar)
     transform: scale(1.1);
   }
   .navBarSection .header .navBar .navLists .headerBtns .loginBtn:hover a {
@@ -115,14 +160,39 @@
     visibility: visible;
     transform: translateY(0px);
     left: 0;
+<<<<<<< HEAD
     transition: 0.05s ease;
+=======
+    transition: 0.3s ease;
+>>>>>>> 939948a (Advanced on navbar)
     padding-bottom: 1rem;
   }
 }
 .navBarSection .header .toggleNavbar .icon {
+<<<<<<< HEAD
   color: var(--PrimaryColor);
 }
 .navBarSection .header .toggleNavbar .icon:hover {
   color: var(--HoverColor);
   transform: scale(1.1);
+=======
+  font-size: 35px;
+  color: var(--WhiteColor);
+}
+.navBarSection .header .toggleNavbar .icon:hover {
+  color: var(--PrimaryColor);
+  transform: scale(1.1);
+}
+.navBarSection .header .toggleNavColor .icon {
+  font-size: 35px;
+  color: var(--PrimaryColor);
+}
+.navBarSection .header .toggleNavColor .icon:hover {
+  color: var(--HoverColor);
+  transform: scale(1.1);
+}
+.navBarSection .activeHeader {
+  background-color: var(--WhiteColor);
+  box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.1);
+>>>>>>> 939948a (Advanced on navbar)
 }/*# sourceMappingURL=navbar.css.map */

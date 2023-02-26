@@ -1,0 +1,189 @@
+/* Colors */
+:root {
+    --PrimaryColor: hsl(219, 65%, 72%);
+    --PrimaryLight: hsl(220, 64%, 88%);
+    --HoverColor: hsl(203, 54%, 46%);
+    --WhiteColor: hsl(0, 0%, 100%);
+    --BlackColor: hsl(206, 73%, 9%);
+    --textColor: hsl(0, 0%, 58%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+    /* box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1) */
+}
+
+.popular {
+    padding-top: 10rem;
+
+    .secContainer {
+        .secHeader {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+
+            .textDiv {
+                .secTitle {
+                    color: var(--BlackColor);
+                    line-height: 1.5rem;
+                    padding-bottom: .5rem;
+                }
+
+                p {
+                    font-size: 13px;
+                    color: var(--textColor);
+                    font-weight: 500;
+                }
+            }
+
+            .iconsDiv{
+                gap: .5rem;
+                .icon{
+                    padding: 0.5rem;
+                    background-color: var(--PrimaryLight);
+                    color: var(--PrimaryColor);
+                    border-radius: 50%;
+                    font-size: 2.5rem;
+                    &:hover{
+                        background-color: var(--PrimaryColor);
+                        column-rule: var(--WhiteColor);
+                        color: var(--PrimaryLight);
+                        transform: scale(1.1);
+                    }
+                }
+
+                .leftIcon{
+                    background-color: var(--PrimaryColor);
+                    color: var(--PrimaryLight);
+                    &:hover{
+                        background-color: var(--PrimaryLight);
+                        color: var(--PrimaryColor);
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .mainContent{
+            padding: 2rem 0;
+            gap: 1rem;
+
+            .singleDestination{
+                overflow: hidden;
+                border-radius: 1rem;
+                box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
+
+                .destImage{
+                    height: 200px;
+                    width: 100%;
+                    position: relative;
+                    overflow: hidden;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+
+                    .overlayInfo{
+                        position: absolute;
+                        display: flex;
+                        align-items: flex-start;
+                        padding: 0;
+                        // padding: 1rem 1.5rem;
+                        justify-content: center;
+                        flex-direction: column;
+                        background: linear-gradient(rgba(0, 0, 0, 0.603),rgba(0,0,0,0.759));
+                        bottom: 0;
+                        width: 100%;
+                        // height: 100%;
+                        height: 0;
+                        overflow: hidden;
+                        transition:.3s ease;
+
+                        h3{
+                            color: var(--WhiteColor);
+                            font-weight: 600;
+                        }
+                        p{
+                            color: var(--WhiteColor);
+                            opacity: .7;
+                            font-size: 13px;
+                        }
+
+                        .icon{
+                            position: absolute;
+                            right: 10px;
+                            bottom: 10px;
+                            padding: 0.5rem;
+                            background: var(--PrimaryColor);
+                            font-size: 2.5rem;
+                            border-radius: 50%;
+                            color: var(--WhiteColor);   
+                            border: 1px solid transparent;
+                            transform: .03s ease;
+
+                            &:hover{
+                                background: var(--PrimaryLight);
+                                border: 1px solid var(--PrimaryColor);
+                                color: var(--PrimaryColor);
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+
+                .destFooter{
+                    padding: 1rem;
+
+                    .number{
+                        font-size: 2rem;
+                        font-weight: 700;
+                        color: var(--BlackColor);
+                        position: relative;
+                        width: max-content;
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            background: var(--PrimaryColor);
+                            top: 45%;
+                            right: -150%;
+                            height: 5px;
+                            width: 45px;
+                            border-radius: 1rem;
+                        }
+                    }
+
+                    .destText{
+                        justify-content: space-between;
+
+                        h6{
+                            color: var(--BlackColor);
+                            font-size: 15px;
+                        }
+
+                        .flex{
+                            color: var(--textColor);
+                            vertical-align: center;
+                            font-size: 13px;
+                            font-weight: 600;
+                            align-items: center;
+                            .icon{
+                                vertical-align: middle;
+                                color: var(--PrimaryColor);
+                            }
+                        }
+                    }
+                }
+
+                &:hover{
+                    .overlayInfo{
+                        transition: .3s ease;
+                        overflow: visible;
+                        padding: 1rem 1.5rem;
+                        height: 100%;
+
+                    }
+                }
+            }
+        }
+    }
+}

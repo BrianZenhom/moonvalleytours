@@ -1,1 +1,214 @@
+<<<<<<< HEAD
 /*# sourceMappingURL=home.css.map */
+=======
+/* Colors */
+:root {
+  --PrimaryColor: hsl(219, 65%, 72%);
+  --PrimaryLight: hsl(220, 64%, 88%);
+  --HoverColor: hsl(203, 54%, 46%);
+  --WhiteColor: hsl(0, 0%, 100%);
+  --BlackColor: hsl(206, 73%, 9%);
+  --textColor: hsl(0, 0%, 58%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  /* box-shadow: rgba(0, 0, 0, 0.1); */
+}
+
+.home {
+  height: 80vh;
+  background: linear-gradient(rgba(33, 33, 33, 0.377), rgba(33, 33, 33, 0)), url("../../Assets/header-bg.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+}
+.home .secContainer .homeText {
+  text-align: center;
+}
+.home .secContainer .homeText .title {
+  margin-top: 5rem;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+}
+.home .secContainer .homeText .subTitle {
+  color: white;
+  opacity: 0.9;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 1rem 0;
+  max-width: 70%;
+  text-align: center;
+  margin: auto;
+}
+.home .secContainer .homeText .btn {
+  background: var(--PrimaryColor);
+  margin-bottom: 6rem;
+  padding: 0.2rem 1.5rem;
+}
+.home .secContainer .homeText .btn a {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.home .secContainer .homeText .btn:hover {
+  transform: scale(1.1);
+  background: var(--PrimaryLight);
+}
+.home .secContainer .homeText .btn:hover a {
+  color: var(--PrimaryColor);
+}
+.home .headerSearch {
+  align-items: center;
+  position: absolute;
+  width: 80%;
+  background: var(--WhiteColor);
+  border-radius: 1rem;
+  padding: 2rem;
+  gap: 1rem;
+  bottom: -21%;
+  transform: translate(-50%);
+  left: 50%;
+  justify-content: center;
+  box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
+}
+.home .headerSearch .headerSearchItems {
+  width: 100%;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--textColor);
+  display: flex;
+  align-items: center;
+  background: var(--inputColor);
+  padding: 10px;
+  border-radius: 1.5rem;
+}
+.home .headerSearch .headerSearchItems .headerSearchText {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-weight: 500;
+  color: var(--PrimaryColor);
+}
+.home .headerSearch .headerSearchItems .headerSearchText .headerIcon {
+  background: transparent;
+  font-size: 1.1rem;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.home .headerSearch .headerSearchItems .headerSearchIcon {
+  color: var(--PrimaryColor);
+  font-size: 1.1rem;
+  margin-right: 8px;
+  align-items: center;
+}
+.home .headerSearch .headerSearchItems input {
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--inputColor);
+  border: none;
+  outline: none;
+  align-items: center;
+}
+.home .headerSearch .headerSearchItems input::-moz-placeholder {
+  color: var(--PrimaryColor);
+  font-size: 13px;
+  font-weight: 500;
+  align-items: center;
+}
+.home .headerSearch .headerSearchItems input::placeholder {
+  color: var(--PrimaryColor);
+  font-size: 13px;
+  font-weight: 500;
+  align-items: center;
+}
+.home .headerSearch .headerSearchItems input:focus {
+  outline: none;
+  color: var(--HoverColor);
+}
+.home .headerSearch .headerSearchItems span {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 400;
+  align-items: center;
+}
+.home .headerSearch .headerSearchItems .date {
+  position: absolute;
+  bottom: 103px;
+  box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
+  border-radius: 1rem;
+}
+.home .headerSearch .headerSearchItems .options {
+  position: absolute;
+  bottom: 103px;
+  background: var(--WhiteColor);
+  box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
+  border-radius: 1rem;
+  color: var(--textColor);
+}
+.home .headerSearch .headerSearchItems .options .optionItem {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.home .headerSearch .headerSearchItems .options .optionItem .optionCounter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.home .headerSearch .headerSearchItems .options .optionItem .optionCounter span {
+  display: inline-block;
+  text-align: right;
+  font-size: 15px;
+  right: 50%;
+}
+.home .headerSearch .headerSearchItems .options .optionItem .optionCounter .optionCounterButton {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--PrimaryColor);
+  color: var(--PrimaryColor);
+  cursor: pointer;
+  border-radius: 10px;
+  background: var(--WhiteColor);
+}
+.home .headerSearch .headerSearchItems .options .optionItem .optionCounter .optionCounterButton:disabled {
+  cursor: not-allowed;
+}
+.home .headerSearch .btn {
+  margin-top: 5px;
+  width: 100%;
+  padding: 0.6rem 1.5rem;
+  color: var(--WhiteColor);
+  font-size: 13px;
+  font-weight: 600;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.home .headerSearch .btn:hover {
+  transform: scale(1.1);
+  background: var(--PrimaryLight);
+  color: var(--PrimaryColor);
+}
+
+@media screen and (min-width: 1024px) {
+  .home {
+    height: 80vh;
+  }
+  .home .headerSearch {
+    display: inline-flex;
+    bottom: -7%;
+    align-items: center;
+  }
+  .home .headerSearch .btn {
+    margin: 0;
+    align-items: center;
+  }
+}/*# sourceMappingURL=home.css.map */
+>>>>>>> 939948a (Advanced on navbar)
