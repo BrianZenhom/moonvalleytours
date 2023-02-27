@@ -1,4 +1,3 @@
-
 /* Colors */
 :root {
     --PrimaryColor: hsl(219, 65%, 72%);
@@ -31,20 +30,23 @@
                 cursor: pointer;
                 align-items: center;
                 justify-content: center;
-                &:hover{
+
+                &:hover {
                     fill: var(--PrimaryColor);
                     transform: scale(1.1);
                 }
             }
         }
-        .activeLogo{
+
+        .activeLogo {
             svg {
                 fill: var(--PrimaryColor);
                 width: 150px;
                 cursor: pointer;
                 align-items: center;
                 justify-content: center;
-                &:hover{
+
+                &:hover {
                     fill: var(--HoverColor);
                     transform: scale(1.1);
                 }
@@ -173,7 +175,8 @@
                 }
             }
         }
-        .toggleNavColor{
+
+        .toggleNavColor {
             .icon {
                 font-size: 35px;
                 color: var(--PrimaryColor);
@@ -186,7 +189,7 @@
         }
     }
 
-    .activeHeader{
+    .activeHeader {
         background-color: var(--WhiteColor);
         box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.1);
     }

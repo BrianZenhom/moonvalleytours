@@ -4,18 +4,18 @@ import './navbar.css'
 import { FaWindowClose } from 'react-icons/fa'
 import { HiViewGrid } from 'react-icons/hi'
 
-const useClickOutside = (handler) =>{
+const useClickOutside = (handler) => {
   const domNode = useRef()
 
-  useEffect(()=>{
-    let maybeHandler = (event)=>{
-    if(!domNode.current.contains(event.target)){
-      handler()
-    }
-  };
+  useEffect(() => {
+    let maybeHandler = (event) => {
+      if (!domNode.current.contains(event.target)) {
+        handler()
+      }
+    };
     document.addEventListener("mousedown", maybeHandler);
 
-    return () =>{
+    return () => {
       document.removeEventListener("mousedown", maybeHandler)
     };
   })
@@ -32,7 +32,7 @@ const Navbar = () => {
     setActive('navBar activeNavbar')
   }
   // clicking outside removes NAV code
-  const domNode = useClickOutside (()=>{
+  const domNode = useClickOutside(() => {
     removeNav(true)
   })
   // Toggle CloseNav code
@@ -42,22 +42,22 @@ const Navbar = () => {
 
   // Add bg color to header
   const [transparent, setTransparent] = useState('header')
-  const addBg = ()=>{
-    if(window.scrollY >= 10){
+  const addBg = () => {
+    if (window.scrollY >= 10) {
       setTransparent('header activeHeader')
     }
-    else{
+    else {
       setTransparent('header')
     }
   }
   window.addEventListener('scroll', addBg)
   // Change logo color on scroll.
   const [logoV, setLogov] = useState('logoDiv')
-  const changeColor = ()=>{
-    if(window.scrollY >= 10){
+  const changeColor = () => {
+    if (window.scrollY >= 10) {
       setLogov('logoDiv activeLogo')
     }
-    else{
+    else {
       setLogov('logoDiv')
     }
   }
@@ -65,11 +65,11 @@ const Navbar = () => {
 
   // Change menu toggle color on scroll
   const [menuOn, setMenuOn] = useState('toggleNavbar')
-  const changeMenu = () =>{
-    if(window.scrollY >= 10){
+  const changeMenu = () => {
+    if (window.scrollY >= 10) {
       setMenuOn('toggleNavbar toggleNavColor')
     }
-    else{
+    else {
       setMenuOn('toggleNavbar')
     }
   }

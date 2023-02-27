@@ -55,7 +55,10 @@
                 }
 
                 &:hover {
-                    a{color: var(--PrimaryColor);}
+                    a {
+                        color: var(--PrimaryColor);
+                    }
+
                     transform: scale(1.1);
                     background: var(--PrimaryLight);
                 }
@@ -95,6 +98,7 @@
                 user-select: none;
                 font-weight: 500;
                 color: var(--PrimaryColor);
+
                 .headerIcon {
                     background: transparent;
                     font-size: 1.1rem;
@@ -138,37 +142,42 @@
                 align-items: center;
             }
 
-            .date{
+            .date {
                 position: absolute;
                 bottom: 103px;
                 box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
                 border-radius: 1rem;
             }
-            .options{
+
+            .options {
                 position: absolute;
                 bottom: 103px;
                 background: var(--WhiteColor);
                 box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
                 border-radius: 1rem;
                 color: var(--textColor);
-                .optionItem{
+
+                .optionItem {
                     width: 200px;
                     display: flex;
                     justify-content: space-between;
                     margin: 10px;
-                    .optionCounter{
+
+                    .optionCounter {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
                         gap: 10px;
                         text-align: center;
-                        span{
+
+                        span {
                             display: inline-block;
                             text-align: right;
                             font-size: 15px;
                             right: 50%;
                         }
-                        .optionCounterButton{
+
+                        .optionCounterButton {
                             width: 30px;
                             height: 30px;
                             border: 1px solid var(--PrimaryColor);
@@ -177,12 +186,13 @@
                             border-radius: 10px;
                             background: var(--WhiteColor);
                         }
-                        .optionCounterButton:disabled{
+
+                        .optionCounterButton:disabled {
                             cursor: not-allowed;
                         }
                     }
                 }
-                
+
             }
         }
 
@@ -204,14 +214,16 @@
     }
 }
 
-@media screen and (min-width: 1024px){
-    .home{
+@media screen and (min-width: 1024px) {
+    .home {
         height: 80vh;
-        .headerSearch{
+
+        .headerSearch {
             display: inline-flex;
             bottom: -7%;
             align-items: center;
-            .btn{
+
+            .btn {
                 margin: 0;
                 align-items: center;
             }
