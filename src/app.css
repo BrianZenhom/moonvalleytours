@@ -1,63 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-<<<<<<< HEAD
-*{
-=======
 * {
->>>>>>> 939948a (Advanced on navbar)
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-<<<<<<< HEAD
-    transition: .05s ease;
-}
-
-:root{
-=======
     transition: .03s ease;
 }
 
 /* Colors */
 :root {
->>>>>>> 939948a (Advanced on navbar)
-    --PrimaryColor: hsl(219, 65%, 72%);
+    --PrimaryColor: hsl(194, 78%, 53%);
     --PrimaryLight: hsl(220, 64%, 88%);
-    --HoverColor: hsl(203, 54%, 46%);
+    --HoverColor: hsl(218, 63%, 37%);
     --WhiteColor: hsl(0, 0%, 100%);
     --BlackColor: hsl(206, 73%, 9%);
-<<<<<<< HEAD
-    --textColor: hsl(0, 0%, 93%);
-    --greyBg: hsl(0, 0%, 96%);
-    --greyText: rgb(190,190,190);
-    --inputColor: hsl(330,12%,97%);
-    /* box-shadow: rgba(0, 0, 0, 0.1); */
-=======
     --textColor: hsl(0, 0%, 58%);
     --greyBg: hsl(0, 0%, 96%);
     --greyText: rgb(190, 190, 190);
     --inputColor: hsl(330, 12%, 97%);
     /* box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1) */
->>>>>>> 939948a (Advanced on navbar)
 }
 
 /* DEFAULT STYLES */
 
-<<<<<<< HEAD
-a{
-    text-decoration: none;
-}
-
-li{
-    list-style: none;
-}
-
-.section{
-    padding: 4rem 0 2rem;
-}
-
-.container{
-=======
 a {
     text-decoration: none;
 }
@@ -71,43 +37,26 @@ li {
 }
 
 .container {
->>>>>>> 939948a (Advanced on navbar)
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
 
-<<<<<<< HEAD
-.icon{
-=======
 .icon {
->>>>>>> 939948a (Advanced on navbar)
     font-size: 2rem;
     cursor: pointer;
 }
 
-<<<<<<< HEAD
-.flex{
-=======
 .flex {
->>>>>>> 939948a (Advanced on navbar)
     display: flex;
     align-items: center;
 }
 
-<<<<<<< HEAD
-.grid{
-=======
 .grid {
->>>>>>> 939948a (Advanced on navbar)
     display: grid;
     align-items: center;
 }
 
-<<<<<<< HEAD
-.btn{
-=======
 .btn {
->>>>>>> 939948a (Advanced on navbar)
     padding: .4rem 1.5rem;
     background-color: var(--PrimaryColor);
     border: none;
@@ -116,71 +65,39 @@ li {
     cursor: pointer;
 }
 
-<<<<<<< HEAD
-.btn a{
-=======
 .btn a {
->>>>>>> 939948a (Advanced on navbar)
     color: var(--WhiteColor);
     font-weight: 500;
 }
 
-<<<<<<< HEAD
-.btn:hover a{
-    color: var(--WhiteColor);
-}
-
-.secIntro{
-=======
 .btn:hover a {
     color: var(--WhiteColor);
 }
 
 .secIntro {
->>>>>>> 939948a (Advanced on navbar)
     max-width: 70%;
     text-align: center;
     margin: 0 auto 2rem;
 }
 
-<<<<<<< HEAD
-.secIntro .secTitle{
-=======
 .secIntro .secTitle {
->>>>>>> 939948a (Advanced on navbar)
     color: var(--BlackColor);
     line-height: 1.5rem;
     padding-bottom: .5rem;
 }
 
-<<<<<<< HEAD
-.secIntro p{
-=======
 .secIntro p {
->>>>>>> 939948a (Advanced on navbar)
     font-size: 14px;
     color: var(--textColor);
     font-weight: 500;
 }
 
-<<<<<<< HEAD
-img, video{
-=======
 img,
 video {
->>>>>>> 939948a (Advanced on navbar)
     width: 100%;
     height: auto;
 }
 
-<<<<<<< HEAD
-input{
-    font-size: 100%;
-}
-
-
-=======
 input {
     font-size: 100%;
 }
->>>>>>> 939948a (Advanced on navbar)

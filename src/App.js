@@ -1,31 +1,17 @@
 import React from 'react'
-import './app.css'
-import Destinations from './Components/Destinations/Destinations.jsx'
-import Navbar from './Components/Navbar/Navbar.jsx'
-import Home from './Components/Home/Home.jsx'
-import Footer from './Components/Footer/Footer.jsx'
-import Offer from './Components/Offers/Offer.jsx'
-import Popular from './Components/Popular/Popular.jsx'
-import About from './Components/About/About'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import '../src/app.css'
+import Home from '../src/Components/index.js'
+
+
 
 const App = () => {
   return (
-    <div>
-      <>
-        <Navbar />
-        <Home />
-<<<<<<< HEAD
-        {/* <Popular />
-        <Offer />
-=======
-        <Popular />
-        {/* <Offer />
->>>>>>> 939948a (Advanced on navbar)
-        <Destinations />
-        <About />
-        <Footer /> */}
-      </>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+    </Routes>
+    </BrowserRouter>
   )
 }
 

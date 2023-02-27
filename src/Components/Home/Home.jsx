@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect, useRef } from 'react'
 import './home.css'
 import { MdTravelExplore } from 'react-icons/md'
@@ -66,12 +67,10 @@ const Home = () => {
     children: 0
   })
 
-  const handleOption = (name, operation) => {
-    setOptions(prev => {
-      return {
-        ...prev, [name]: operation === "i" ? options[name] + 1 : options[name] - 1,
-      }
-    })
+  const handleOption = (name, operation)=>{
+    setOptions(prev=>{return{
+      ...prev,[name]: operation === "i" ? options[name] +1: options[name]-1,
+    }})
   }
 
   const domNode = useClickOutsideDate(() => {
@@ -128,8 +127,9 @@ const Home = () => {
             />}
           </div>
 
+
           <div ref={domOp} className="headerSearchItems">
-            <span onClick={() => setOpenOptions(!openOptions)} className="headerSearchText">
+            <span onClick={()=>setOpenOptions(!openOptions)}className="headerSearchText">
               <MdOutlinePeopleAlt className='headerIcon' />
               {`${options.adult} adult • ${options.children} children`}
             </span>
@@ -137,17 +137,17 @@ const Home = () => {
               <div className="optionItem">
                 <span className="optionText">Adult</span>
                 <div className="optionCounter">
-                  <button disabled={options.adult <= 1} className="optionCounterButton" onClick={() => handleOption("adult", "d")}>-</button>
+                  <button disabled={options.adult <= 1} className="optionCounterButton" onClick={()=> handleOption("adult", "d")}>-</button>
                   <span className="optionCounterNumber">{options.adult}</span>
-                  <button className="optionCounterButton" onClick={() => handleOption("adult", "i")}>+</button>
+                  <button className="optionCounterButton" onClick={()=> handleOption("adult", "i")}>+</button>
                 </div>
               </div>
               <div className="optionItem">
                 <span className="optionText">Children</span>
                 <div className="optionCounter">
-                  <button disabled={options.children <= 0} className="optionCounterButton" onClick={() => handleOption("children", "d")}>-</button>
+                  <button disabled={options.children <= 0} className="optionCounterButton" onClick={()=> handleOption("children", "d")}>-</button>
                   <span className="optionCounterNumber">{options.children}</span>
-                  <button className="optionCounterButton" onClick={() => handleOption("children", "i")}>+</button>
+                  <button className="optionCounterButton" onClick={()=> handleOption("children", "i")}>+</button>
                 </div>
               </div>
             </div>}

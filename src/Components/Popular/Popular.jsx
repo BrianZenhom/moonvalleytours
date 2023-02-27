@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import './popular.css'
-
-const Popular = () => {
-  return (
-    <div>
-      Popular
-    </div>
-=======
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react'
 import './popular.css'
@@ -130,7 +120,6 @@ const Popular = () => {
 
       </div>
     </section>
->>>>>>> 939948a (Advanced on navbar)
   )
 }
 

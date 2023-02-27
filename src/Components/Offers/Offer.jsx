@@ -3,7 +3,9 @@ import './offer.css'
 const Offer = () => {
   return (
     <div>
-      Offer
+      <div className="homeContainer container">
+        Featured
+      </div>
     </div>
   )
 }

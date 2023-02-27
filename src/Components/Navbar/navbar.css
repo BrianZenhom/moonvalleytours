@@ -1,16 +1,15 @@
 /* Colors */
-/* Colors */
 :root {
-  --PrimaryColor: hsl(219, 65%, 72%);
+  --PrimaryColor: hsl(194, 78%, 53%);
   --PrimaryLight: hsl(220, 64%, 88%);
-  --HoverColor: hsl(203, 54%, 46%);
+  --HoverColor: hsl(218, 63%, 37%);
   --WhiteColor: hsl(0, 0%, 100%);
   --BlackColor: hsl(206, 73%, 9%);
   --textColor: hsl(0, 0%, 58%);
   --greyBg: hsl(0, 0%, 96%);
   --greyText: rgb(190, 190, 190);
   --inputColor: hsl(330, 12%, 97%);
-  /* box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.1); */
+  /* box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1) */
 }
 
 .navBarSection .header {
