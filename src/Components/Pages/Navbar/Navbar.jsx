@@ -51,6 +51,16 @@ const Navbar = () => {
     }
   }
   window.addEventListener('scroll', addBg)
+  // Add Color To links
+  const [linkColor, setLinkColor] = useState('navLink')
+  const changeLinkColor = ()=>{
+    if (window.scrollY >= 10){
+      setLinkColor('linkActive')
+    } else {
+      setLinkColor('navLink')
+    }
+  }
+  window.addEventListener('scroll', changeLinkColor)
   // Change logo color on scroll.
   const [logoV, setLogov] = useState('logoDiv')
   const changeColor = () => {
@@ -62,7 +72,16 @@ const Navbar = () => {
     }
   }
   window.addEventListener('scroll', changeColor)
-
+  // Change login Color on Scroll.
+  const [loginC, setLoginC] = useState ('btn loginBtn')
+  const changeLoginColor = () => {
+    if (window.scrollY >= 10){
+      setLoginC('btn ActiveLogin')
+    }else{
+      setLoginC('btn loginBtn')
+    }
+  }
+  window.addEventListener('scroll', changeLoginColor)
   // Change menu toggle color on scroll
   const [menuOn, setMenuOn] = useState('toggleNavbar')
   const changeMenu = () => {
@@ -89,29 +108,29 @@ const Navbar = () => {
           <ul className="navLists flex">
 
             <li className="navItem">
-              <a href="#" className="navLink">Home</a>
+              <a href="#" className={linkColor}>Home</a>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">Destinations</a>
+              <a href="#" className={linkColor}>Destinations</a>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">Services</a>
+              <a href="#" className={linkColor}>Services</a>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">Contact</a>
+              <a href="#" className={linkColor}>Contact</a>
             </li>
 
 
             <li className="navItem">
-              <a href="#" className="navLink">About</a>
+              <a href="#" className={linkColor}>About</a>
             </li>
 
             <div ref={domNode} className="headerBtns flex">
-              <button className="btn loginBtn">
-                <a href="#">Login</a>
+              <button className={loginC}>
+                <a className="LoginColor" href="#">Login</a>
               </button>
               <button className="btn signupBtn">
                 <a href="#">Signup</a>

@@ -57,7 +57,7 @@
     opacity: 0;
     visibility: hidden;
     transform: translateY(-20px);
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
     box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
     z-index: 1000;
   }
@@ -73,12 +73,14 @@
   .navBarSection .header .navBar .navLists .navItem .navLink {
     color: var(--textColor);
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 400;
+    display: flex;
   }
   .navBarSection .header .navBar .navLists .navItem .navLink:hover {
+    transform: scale(1.1);
     font-size: 1rem;
     color: var(--PrimaryColor);
-    transform: scale(1.1);
+    transition: 0.3s ease;
   }
   .navBarSection .header .navBar .navLists .headerBtns {
     flex-direction: column;
@@ -130,9 +132,18 @@
     visibility: visible;
     transform: translateY(0px);
     left: 0;
-    transition: 0.3s ease;
+    transition: 0.5s ease-in-out;
     padding-bottom: 1rem;
   }
+}
+.navBarSection .header .linkActive {
+  font-weight: 400;
+  padding: 0 0.45rem;
+  color: var(--PrimaryColor);
+  font-size: 0.9rem;
+}
+.navBarSection .header .linkActive:hover {
+  color: var(--HoverColor);
 }
 .navBarSection .header .toggleNavbar .icon {
   font-size: 35px;
@@ -153,4 +164,77 @@
 .navBarSection .activeHeader {
   background-color: var(--WhiteColor);
   box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 769px) {
+  .navBarSection .toggleNavbar, .navBarSection .closeNavbar {
+    display: none;
+  }
+  .navBarSection .header {
+    padding: 1.5rem 2rem;
+  }
+  .navBarSection .header .navBar .navLists {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink {
+    color: var(--WhiteColor);
+    padding: 0 0.45rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink:hover {
+    color: var(--PrimaryColor);
+    transform: scale(1.1);
+  }
+  .navBarSection .header .navBar .btn {
+    margin-left: 1rem;
+  }
+  .navBarSection .header .navBar .btn a {
+    color: var(--WhiteColor);
+    font-weight: 500;
+  }
+  .navBarSection .header .navBar .loginBtn {
+    background: none;
+    border: 1px solid var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .loginBtn:hover {
+    background: var(--PrimaryColor);
+    transform: scale(1.1);
+  }
+  .navBarSection .header .navBar .loginBtn:hover a {
+    color: var(--WhiteColor);
+  }
+  .navBarSection .header .navBar .ActiveLogin {
+    background: none;
+    border: 1px solid var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .ActiveLogin a {
+    color: var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .ActiveLogin:hover {
+    background: var(--PrimaryColor);
+    transform: scale(1.1);
+  }
+  .navBarSection .header .navBar .ActiveLogin:hover a {
+    color: var(--WhiteColor);
+  }
+  .navBarSection .header .navBar .signupBtn:hover {
+    transform: scale(1.1);
+  }
+}
+@media screen and (min-width: 960px) {
+  .header .navBar .navLists .navItem {
+    padding: 0 0.7rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 1rem 8.5rem !important;
+  }
+  .header .navBar .navLists .navItem {
+    padding: 0 0.7rem;
+  }
 }/*# sourceMappingURL=navbar.css.map */

@@ -187,3 +187,24 @@
         }
     }
 }
+
+// MEDIA QUERIES
+
+@media screen and (min-width: 480px){
+    .popular{
+        padding-top: 10rem;
+    }
+}
+@media screen and (min-width: 480px){
+    .popular{
+        .secContainer{
+            .secHeader{
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+}
+

@@ -64,7 +64,8 @@ const Home = () => {
   const [openOptions, setOpenOptions] = useState(false);
   const [options, setOptions] = useState({
     adult: 1,
-    children: 0
+    children: 0,
+    room: 1
   })
 
   const handleOption = (name, operation)=>{
@@ -89,7 +90,6 @@ const Home = () => {
           <h1 className="title">
             Discover your next adventure.
           </h1>
-
           <p className="subTitle">
             Let us take the hassle of planning your next adventure.
           </p>
@@ -131,7 +131,7 @@ const Home = () => {
           <div ref={domOp} className="headerSearchItems">
             <span onClick={()=>setOpenOptions(!openOptions)}className="headerSearchText">
               <MdOutlinePeopleAlt className='headerIcon' />
-              {`${options.adult} adult • ${options.children} children`}
+              {`${options.adult} adult • ${options.children} children • ${options.room} room`}
             </span>
             {openOptions && <div className="options">
               <div className="optionItem">
@@ -148,6 +148,14 @@ const Home = () => {
                   <button disabled={options.children <= 0} className="optionCounterButton" onClick={()=> handleOption("children", "d")}>-</button>
                   <span className="optionCounterNumber">{options.children}</span>
                   <button className="optionCounterButton" onClick={()=> handleOption("children", "i")}>+</button>
+                </div>
+              </div>
+              <div className="optionItem">
+                <span className="optionText">Room</span>
+                <div className="optionCounter">
+                  <button disabled={options.room <= 1} className="optionCounterButton" onClick={()=> handleOption("room", "d")}>-</button>
+                  <span className="optionCounterNumber">{options.room}</span>
+                  <button className="optionCounterButton" onClick={()=> handleOption("room", "i")}>+</button>
                 </div>
               </div>
             </div>}

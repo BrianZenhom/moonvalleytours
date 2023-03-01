@@ -65,7 +65,7 @@
                 opacity: 0;
                 visibility: hidden;
                 transform: translateY(-20px);
-                transition: .3s ease-in-out;
+                transition: .5s ease-in-out;
                 box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
                 z-index: 1000;
 
@@ -81,12 +81,14 @@
                         .navLink {
                             color: var(--textColor);
                             font-size: .9rem;
-                            font-weight: 600;
+                            font-weight: 400;
+                            display: flex;
 
                             &:hover {
+                                transform: scale(1.1);
                                 font-size: 1rem;
                                 color: var(--PrimaryColor);
-                                transform: scale(1.1);
+                                transition: .3s ease;
                             }
                         }
 
@@ -159,8 +161,17 @@
                 visibility: visible;
                 transform: translateY(0px);
                 left: 0;
-                transition: .3s ease;
+                transition: .5s ease-in-out;
                 padding-bottom: 1rem;
+            }
+        }
+        .linkActive{
+            font-weight: 400;
+            padding: 0 .45rem;
+            color: var(--PrimaryColor);
+            font-size: .9rem;
+            &:hover{
+                color: var(--HoverColor);
             }
         }
 
@@ -192,5 +203,106 @@
     .activeHeader {
         background-color: var(--WhiteColor);
         box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.1);
+    }
+}
+
+// MEDIA QUERIES =======>
+@media screen and (min-width: 769px) {
+    .navBarSection{
+
+        .toggleNavbar, .closeNavbar{
+            display: none;
+        }
+        .header{
+            padding: 1.5rem 2rem;
+            .navBar{
+                .navLists{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+
+                    .navItem{
+                        .navLink{
+                            color: var(--WhiteColor);
+                            padding: 0 .45rem;
+                            font-size: .9rem;
+                            font-weight: 300;
+                            &:hover{
+                                color: var(--PrimaryColor);
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+
+                .btn{
+                    margin-left: 1rem;
+
+                    a{
+                        color: var(--WhiteColor);
+                        font-weight: 500;
+                    }
+                }
+
+                .loginBtn{
+                    background: none;
+                    border: 1px solid var(--PrimaryColor);
+
+                    &:hover{
+                        background: var(--PrimaryColor);
+                        transform: scale(1.1);
+                        a{
+                            color: var(--WhiteColor);
+                        }
+                    }
+                }
+                .ActiveLogin{
+                    background: none;
+                    border: 1px solid var(--PrimaryColor);
+                    a{
+                        color: var(--PrimaryColor);
+                    }
+                    &:hover{
+                        background: var(--PrimaryColor);
+                        transform: scale(1.1);
+                        a{
+                            color: var(--WhiteColor);
+                        }
+                    }
+                }
+                .signupBtn{
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .header{
+        .navBar{
+            .navLists{
+                .navItem{
+                    padding: 0 .7rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .header{
+        padding: 1rem 8.5rem!important;
+        .navBar{
+            .navLists{
+                .navItem{
+                    padding: 0 .7rem;
+                }
+            }
+        }
     }
 }

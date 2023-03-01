@@ -14,7 +14,7 @@
 
 .home {
     height: 80vh;
-    background: linear-gradient(rgba(33, 33, 33, 0.377), rgba(33, 33, 33, 0)), url('../../Assets/header-bg.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(33, 33, 33, 0.377), rgba(33, 33, 33, 0)), url('../../../Assets/header-bg.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +46,6 @@
 
             .btn {
                 background: var(--PrimaryColor);
-                margin-bottom: 6rem;
                 padding: .2rem 1.5rem;
 
                 a {
@@ -163,7 +162,6 @@
                         gap: 10px;
                         text-align: center;
                         span{
-                            display: inline-block;
                             text-align: right;
                             font-size: 15px;
                             right: 50%;
@@ -187,7 +185,6 @@
         }
 
         .btn {
-            margin-top: 5px;
             width: 100%;
             padding: .6rem 1.5rem;
             color: var(--WhiteColor);
@@ -204,17 +201,80 @@
     }
 }
 
-@media screen and (min-width: 1024px){
+// MEDIA QUERIES
+
+@media screen and (min-width: 320px) {
     .home{
-        height: 80vh;
-        .headerSearch{
-            display: inline-flex;
-            bottom: -7%;
-            align-items: center;
-            .btn{
-                margin: 0;
-                align-items: center;
+        .secContainer{
+            .homeText{
+                margin-bottom: 8rem;
             }
         }
     }
 }
+
+@media screen and (min-width: 480px){
+    .home{
+        .secContainer{
+            .headerSearch{
+                bottom: -100px;
+                width: 90%;
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 556px) {
+    .home{
+        .secContainer{
+            .homeText{
+                margin-bottom: 0;
+                .title{
+                    font-size: 2.5rem;
+                }
+                .subTitle{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 720px) {
+    .home{
+        .secContainer{
+            .headerSearch{
+                bottom: -10%;
+                grid-template-columns: repeat(4,1fr);
+                .btn{
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 720px) {
+    .home{
+        .secContainer{
+            .homeText{
+                margin-bottom: 0;
+                padding: 1rem 10rem;
+
+                .title{
+                    font-size: 3.5rem;
+                    margin: auto;
+                    line-height: 4rem;
+                }
+
+                .subtTitle{
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+
