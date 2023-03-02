@@ -117,6 +117,7 @@ const Home = () => {
               {`${format(date[0].startDate, "E, d MMM")} - ${format(date[0].endDate, "E, d MMM")}`}
             </span>
             {openDate && <DateRange
+              minDate={new Date()}
               onChange={item => setDate([item.selection])}
               showSelectionPreview={true}
               moveRangeOnFirstSelection={false}

@@ -35,15 +35,17 @@
                 }
             }
 
-            .iconsDiv{
+            .iconsDiv {
                 gap: .5rem;
-                .icon{
+
+                .icon {
                     padding: 0.5rem;
                     background-color: var(--PrimaryLight);
                     color: var(--PrimaryColor);
                     border-radius: 50%;
                     font-size: 2.5rem;
-                    &:hover{
+
+                    &:hover {
                         background-color: var(--PrimaryColor);
                         column-rule: var(--WhiteColor);
                         color: var(--PrimaryLight);
@@ -51,10 +53,11 @@
                     }
                 }
 
-                .leftIcon{
+                .leftIcon {
                     background-color: var(--PrimaryColor);
                     color: var(--PrimaryLight);
-                    &:hover{
+
+                    &:hover {
                         background-color: var(--PrimaryLight);
                         color: var(--PrimaryColor);
                         transform: scale(1.1);
@@ -63,142 +66,158 @@
             }
         }
 
-        .mainContent{
-            padding: 2rem 0;
-            gap: 1rem;
-
-            .singleDestination{
-                overflow: hidden;
-                border-radius: 1rem;
-                box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
-
-                .destImage{
-                    height: 200px;
+        .react-multi-carousel-list {
+            width: 100%;
+            user-select: none;
+            .react-multi-carousel-track {
+                .react-multi-carousel-item {
+                    padding-left: 1rem;
+                    padding-bottom: 1rem;
+                    padding-top: 1rem;
+                    padding-right: 1rem;
+                    height: 600px;
                     width: 100%;
-                    position: relative;
-                    overflow: hidden;
-                    img{
-                        height: 100%;
-                        width: 100%;
-                        object-fit: cover;
-                    }
-
-                    .overlayInfo{
-                        position: absolute;
-                        display: flex;
-                        align-items: flex-start;
-                        padding: 0;
-                        // padding: 1rem 1.5rem;
-                        justify-content: center;
-                        flex-direction: column;
-                        background: linear-gradient(rgba(0, 0, 0, 0.603),rgba(0,0,0,0.759));
-                        bottom: 0;
-                        width: 100%;
-                        // height: 100%;
-                        height: 0;
+                    .singleDestination {
+                        height: auto;
                         overflow: hidden;
-                        transition:.3s ease;
+                        border-radius: 1rem;
+                        box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
 
-                        h3{
-                            color: var(--WhiteColor);
-                            font-weight: 600;
-                        }
-                        p{
-                            color: var(--WhiteColor);
-                            opacity: .7;
-                            font-size: 13px;
-                        }
+                        .destImage {
+                            height: 300px;
+                            width: 100%;
+                            position: relative;
+                            overflow: hidden;
 
-                        .icon{
-                            position: absolute;
-                            right: 10px;
-                            bottom: 10px;
-                            padding: 0.5rem;
-                            background: var(--PrimaryColor);
-                            font-size: 2.5rem;
-                            border-radius: 50%;
-                            color: var(--WhiteColor);   
-                            border: 1px solid transparent;
-                            transform: .03s ease;
+                            img {
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;
+                            }
 
-                            &:hover{
-                                background: var(--PrimaryLight);
-                                border: 1px solid var(--PrimaryColor);
-                                color: var(--PrimaryColor);
-                                transform: scale(1.1);
+                            .overlayInfo {
+                                position: absolute;
+                                display: flex;
+                                align-items: flex-start;
+                                padding: 0;
+                                // padding: 1rem 1.5rem;
+                                justify-content: center;
+                                flex-direction: column;
+                                background: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.759));
+                                bottom: 0;
+                                width: 100%;
+                                // height: 100%;
+                                height: 0;
+                                overflow: hidden;
+                                transition: .3s ease;
+
+                                h3 {
+                                    color: var(--WhiteColor);
+                                    font-weight: 600;
+                                }
+
+                                p {
+                                    color: var(--WhiteColor);
+                                    opacity: .7;
+                                    font-size: 13px;
+                                }
+
+                                .icon {
+                                    position: absolute;
+                                    right: 10px;
+                                    bottom: 10px;
+                                    padding: 0.5rem;
+                                    background: var(--PrimaryColor);
+                                    font-size: 2.5rem;
+                                    border-radius: 50%;
+                                    color: var(--WhiteColor);
+                                    border: 1px solid transparent;
+                                    transform: .03s ease;
+
+                                    &:hover {
+                                        background: var(--PrimaryLight);
+                                        border: 1px solid var(--PrimaryColor);
+                                        color: var(--PrimaryColor);
+                                        transform: scale(1.1);
+                                    }
+                                }
                             }
                         }
-                    }
-                }
 
-                .destFooter{
-                    padding: 1rem;
+                        .destFooter {
+                            padding: 1rem;
 
-                    .number{
-                        font-size: 2rem;
-                        font-weight: 700;
-                        color: var(--BlackColor);
-                        position: relative;
-                        width: max-content;
-                        &::after{
-                            content: '';
-                            position: absolute;
-                            background: var(--PrimaryColor);
-                            top: 45%;
-                            right: -150%;
-                            height: 5px;
-                            width: 45px;
-                            border-radius: 1rem;
-                        }
-                    }
+                            .number {
+                                font-size: 2rem;
+                                font-weight: 700;
+                                color: var(--BlackColor);
+                                position: relative;
+                                width: max-content;
 
-                    .destText{
-                        justify-content: space-between;
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    background: var(--PrimaryColor);
+                                    top: 45%;
+                                    right: -150%;
+                                    height: 5px;
+                                    width: 45px;
+                                    border-radius: 1rem;
+                                }
+                            }
 
-                        h6{
-                            color: var(--BlackColor);
-                            font-size: 15px;
-                        }
+                            .destText {
+                                justify-content: space-between;
 
-                        .flex{
-                            color: var(--textColor);
-                            vertical-align: center;
-                            font-size: 13px;
-                            font-weight: 600;
-                            align-items: center;
-                            .icon{
-                                vertical-align: middle;
-                                color: var(--PrimaryColor);
+                                h6 {
+                                    color: var(--BlackColor);
+                                    font-size: 15px;
+                                }
+
+                                .flex {
+                                    color: var(--textColor);
+                                    vertical-align: center;
+                                    font-size: 13px;
+                                    font-weight: 600;
+                                    align-items: center;
+
+                                    .icon {
+                                        vertical-align: middle;
+                                        color: var(--PrimaryColor);
+                                    }
+                                }
                             }
                         }
-                    }
-                }
 
-                &:hover{
-                    .overlayInfo{
-                        transition: .3s ease;
-                        overflow: visible;
-                        padding: 1rem 1.5rem;
-                        height: 100%;
+                        &:hover {
+                            .overlayInfo {
+                                transition: .3s ease;
+                                overflow: visible;
+                                padding: 1rem 1.5rem;
+                                height: 100%;
 
+                            }
+                        }
                     }
                 }
             }
+
         }
     }
 }
 
 // MEDIA QUERIES
 
-@media screen and (min-width: 480px){
-    .popular{
+@media screen and (min-width: 480px) {
+    .popular {
         padding-top: 10rem;
     }
 }
-@media screen and (min-width: 480px){
-    .popular{
-        .secContainer{
-            .secHeader{
+
+@media screen and (min-width: 480px) {
+    .popular {
+        .secContainer {
+            .secHeader {
                 width: 100%;
                 flex-direction: row;
                 justify-content: space-between;
@@ -207,4 +226,3 @@
         }
     }
 }
-
